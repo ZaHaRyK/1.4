@@ -1,0 +1,12 @@
+#DIV{
+    display: flex;
+}
+
+.hidden {
+    display: hidden;
+}
+
+.div3{
+    background-color:#000000;width:100px;height:100px;
+}
+

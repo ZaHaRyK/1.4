@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UFT-8">
+    <link rel="stylesheet" href="ind1-2.css">
+</head>
+<body>
+
+<div id="DIV">
+
+<button id="button1" onclick="css()">Click</button>
+<div id="div1" style="background-color:#000000;width:100px;height:100px;"></div>
+
+<button id="button2" onclick="js()" style="margin-left:200px;">Click</button>
+<div id="div2" style="background-color:#000000;width:100px;height:100px;"></div>
+
+<button id="button3" onclick="css_js()" style="margin-left:200px;">Click</button>
+<div id="div3" class="div3"></div>
+
+</div>
+<script src='ind1-2.js'></script>
+<script>
+  function css(){
+  const block = document.querySelector("#div1")
+        block.style.display = "none"
+  }
+</script>
+</body>
+</html> 
