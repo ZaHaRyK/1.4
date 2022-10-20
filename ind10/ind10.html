@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div {
+            height: 100%;
+            width: 100%;
+            padding-bottom: 40%;
+            padding-top: 10%;
+            text-align: center;
+
+        }
+        body {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body onmousemove="xy()">
+    <div>
+        <p id="textXY">X: Y:</p>
+    </div>
+    <script>
+        let text = document.getElementById('textXY')
+        function xy() {
+            text.innerText = `X: ${event.screenX},Y: ${event.screenY}`
+        }
+    </script>
+</body>
+</html>

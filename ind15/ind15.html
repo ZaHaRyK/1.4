@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="big" style="height: 300px; width: 300px;  background: blue">
+      <div id="small" style="height: 150px; width: 150px; background: red">
+      </div>
+    </div>
+
+    <script>
+        const big = document.getElementById('big')
+        const small = document.getElementById('small')
+
+        big.addEventListener("click",() => alert("🟦"));
+        small.addEventListener("click",(event) => {
+            alert("🟥");
+            event.stopPropagation();
+        });
+    </script>
+</body>
+</html>

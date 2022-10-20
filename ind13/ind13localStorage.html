@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <textarea id="1" style="width: 150px; height: 200px;" ></textarea>
+    <textarea id="2" style="width: 150px; height: 200px;" ></textarea>
+    <textarea id="3" style="width: 150px; height: 200px;" ></textarea>
+    <script>
+        let input1 = document.getElementById("1");
+        let input2 = document.getElementById("2");
+        let input3 = document.getElementById("3");
+
+        input1.onload = loadT(1,input1)
+        input2.onload = loadT(2,input2)
+        input3.onload = loadT(3,input3)
+
+        input1.oninput = function() {
+            SaveT(1,input1.value)
+        };
+        input2.oninput = function() {
+            SaveT(2,input2.value)
+        };
+        input3.oninput = function() {
+            SaveT(3,input3.value)
+        };
+        
+        function SaveT(name,value) {
+            localStorage.setItem(name,value)
+        }
+        function loadT(name,input){
+            input.value = localStorage.getItem(name)
+        }
+    </script>
+
+</body>
+</html>
