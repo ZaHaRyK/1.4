@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <textarea id="textarea"></textarea>
+    <button id="button" onclick="seepicture()">see picture</button>
+    <script>
+        const textarea = document.getElementById('textarea')
+        function seepicture() {
+            const URL = textarea.value.split('\n')
+            for(let i = 0; i < URL.length; i++) {
+                let picture = document.createElement("img")
+                picture.src = URL[i]
+                document.body.append(picture)
+            }
+        }
+    </script>
+</body>
+</html>

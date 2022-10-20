@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UFT-8">
+    <link rel="stylesheet" href="ind1.css">
+</head>
+<body>
+
+<div id="DIV">
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<div class="block"></div>
+<button id="button3" onclick="css()" style="margin-left:200px;">Click</button>
+
+</div>
+<script src='ind1.js'></script>
+<script>
+    let itHidden = false
+    function css(){
+        const blocks = document.querySelectorAll(".block")   
+        if (itHidden){
+            blocks.forEach((block)=>{
+                block.style.display = "block";
+            })
+            itHidden = false
+        }else{
+            blocks.forEach((block)=>{
+                block.style.display = "none";
+            })
+            itHidden = true
+        }
+    }
+</script>
+<style>
+    #DIV{
+        display: flex;
+    }
+    .block{
+        background-color:#000000;
+        width:100px;
+        height:100px;
+        margin: 20px;
+    }
+</style>
+</body>
+</html> 

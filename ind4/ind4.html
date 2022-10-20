@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .div1{
+            background-color: black;
+            width: 100px;
+            height: 100px;
+        }
+        #div2{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        .div3{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div id="div2"></div>
+    <div class="div3"></div>
+    <input type="text">
+    <button>Go</button>
+    <script>
+        document.querySelector("button").addEventListener("click", () =>{
+            const value = document.querySelector("input").value
+            const elements = document.querySelectorAll(value)
+            for(let i = 0;i<elements.length;i++){
+                const dis = elements[i].style.display;
+                if(dis === "none"){
+                    elements[i].style.display = "block";
+                }else{
+                    elements[i].style.display = "none";
+                }
+            }
+        })
+    </script>
+</body>
+</html>
